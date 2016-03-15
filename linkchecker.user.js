@@ -262,4 +262,8 @@
     }(k, n, t, r, v);
     0 === k.location.pathname.indexOf("/showthread.php") && u().then(n.checkTopicLinks);
   }
+<<<<<<< HEAD
 })(window, document, jBone);
+=======
+})(window, document, jBone);
+>>>>>>> origin/master
