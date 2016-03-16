@@ -8,7 +8,7 @@
 // @license     MIT License
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
-// @require     https://www.googledrive.com/host/0B10BK7prllenfi1uWXR1NlZGdzBRV21GVnVJREVPTnJGUDRIXzh0dDk3ZmNsX09oOE9KUE0/asmcrypto.js
+// @require     https://raw.githubusercontent.com/triplexfw/greasemonkey/master/asmcrypto.js
 // @updateURL   https://linkchecker.github.io/releases/linkchecker.meta.js
 // @downloadURL https://linkchecker.github.io/releases/linkchecker.user.js
 // @namespace   4971e63b909612f5598edd6d90012dae
