@@ -41,7 +41,7 @@ macro1 += "TAG POS=1 TYPE=INPUT:TEXT ATTR=ID:login-name2 CONTENT=" + login + jsL
 macro1 += "SET !ENCRYPTION NO" + jsLF;
 macro1 += "EVENT TYPE=CLICK SELECTOR=\"#login-password2\" BUTTON=0" + jsLF;
 macro1 += "TAG POS=1 TYPE=INPUT:PASSWORD ATTR=ID:login-password2 CONTENT=" + senha + jsLF;
-macro1 += "EVENT TYPE=CLICK SELECTOR=\"#startholder>DIV:nth-of-type(2)>DIV>DIV>DIV>DIV:nth-of-type(3)>DIV>DIV:nth-of-type(6)>DIV:nth-of-type(2)>DIV\" BUTTON=0" + jsLF;
+macro1 += "TAG POS=1 TYPE=DIV ATTR=CLASS:register-st2-button-arrow" + jsLF;
 iimPlay(macro1);
 b = 1
  }
