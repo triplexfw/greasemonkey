@@ -1,4 +1,4 @@
-﻿var macro, macro1, macrov1, extrair1, extrair2, macrov2;
+var macro, macro1, macrov1, extrair1, extrair2, macrov2;
 var login, senha, c, a, b, extrair3, macrosave;
 var jsLF = "\n";
 
@@ -24,7 +24,7 @@ senha = iimGetLastExtract(2);
 macrov1 = "CODE:";
 macrov1 += "TAG POS=1 TYPE=A ATTR=TXT:Info EXTRACT=TXT" + jsLF;
 macrov1 += "TAG POS=1 TYPE=A ATTR=TXT:Menu EXTRACT=TXT" + jsLF;
-macrov1 += "TAG POS=100 TYPE=SPAN ATTR=* EXTRACT=TXT"
+macrov1 += "TAG POS=117 TYPE=SPAN ATTR=* EXTRACT=TXT"
 
 function verificar() { iimPlay(macrov1);
 extrair1 = iimGetLastExtract(1);
