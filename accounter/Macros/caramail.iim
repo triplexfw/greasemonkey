@@ -1,0 +1,34 @@
+﻿VERSION BUILD=8970419 RECORDER=FX
+TAB T=1
+URL GOTO=https://service.gmx.fr/registration.html?edition=fr&lang=fr&#.3338828-stage-calltoaction2-1
+SET nome EVAL("var min = 1; var max = 2218; var nome = Math.floor(Math.random() * (max - min + 1)) + min; nome;")
+SET sobrenome EVAL("var min = 1; var max = 1000; var sobrenome = Math.floor(Math.random() * (max - min + 1)) + min; sobrenome;")
+SET !EXTRACT_TEST_POPUP NO
+ CMDLINE !DATASOURCE nomes.txt
+ SET !DATASOURCE_COLUMNS 1
+ SET !DATASOURCE_LINE {{nome}}
+ SET !VAR1 {{!COL1}}
+ CMDLINE !DATASOURCE sobrenomes.txt
+ SET !DATASOURCE_COLUMNS 1
+ SET !DATASOURCE_LINE {{sobrenome}}
+ SET !VAR2 {{!COL1}}
+TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:1 CONTENT={{!VAR1}}
+TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:2 CONTENT={{!VAR2}}
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:3 CONTENT=%MALE
+SET numero EVAL("var min = 10; var max = 25; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:4 CONTENT=%{{numero}}
+SET numero EVAL("var min = 1; var max = 12; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:5 CONTENT=%{{numero}}
+SET numero EVAL("var min = 16; var max = 76; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:6 CONTENT=%{{numero}}
+PROMPT "Digite um login" !VAR1
+TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:8 CONTENT={{!VAR1}}
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:9 CONTENT=%option3
+SET !ENCRYPTION NO
+PROMPT "Digite uma senha." !VAR2
+TAG POS=1 TYPE=INPUT:PASSWORD ATTR=TABINDEX:10 CONTENT={{!VAR2}}
+TAG POS=1 TYPE=INPUT:PASSWORD ATTR=TABINDEX:11 CONTENT={{!VAR2}}
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:13 CONTENT=%0
+TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:14 CONTENT=8745
+SET !EXTRACT {{!VAR1}}@caramail.com:{{!VAR2}}<BR>
+SAVEAS TYPE=EXTRACT FOLDER=* FILE=contas_p2m_fw.txt
