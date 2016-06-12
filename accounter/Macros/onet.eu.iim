@@ -1,0 +1,40 @@
+﻿VERSION BUILD=8970419 RECORDER=FX
+TAB T=1
+URL GOTO=https://konto.onet.pl/register-email.html?app_id=poczta.onet.pl.front.onetapi.pl
+SET nome EVAL("var min = 1; var max = 2218; var nome = Math.floor(Math.random() * (max - min + 1)) + min; nome;")
+SET sobrenome EVAL("var min = 1; var max = 1000; var sobrenome = Math.floor(Math.random() * (max - min + 1)) + min; sobrenome;")
+SET !EXTRACT_TEST_POPUP NO
+ CMDLINE !DATASOURCE nomes.txt
+ SET !DATASOURCE_COLUMNS 1
+ SET !DATASOURCE_LINE {{nome}}
+ SET !VAR1 {{!COL1}}
+ CMDLINE !DATASOURCE sobrenomes.txt
+ SET !DATASOURCE_COLUMNS 1
+ SET !DATASOURCE_LINE {{sobrenome}}
+ SET !VAR2 {{!COL1}}
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registerForm ATTR=ID:f_nameSurname CONTENT="{{!VAR1}} {{!VAR2}}"
+TAG POS=1 TYPE=INPUT:RADIO FORM=ID:registerForm ATTR=ID:f_gender_M
+SET numero EVAL("var min = 10; var max = 25; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=ID:f_birthDate_day CONTENT=%{{numero}}
+SET numero EVAL("var min = 1; var max = 12; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=NAME:birthDate[month] CONTENT=%{{numero}}
+SET numero EVAL("var min = 1950; var max = 2000; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=NAME:birthDate[year] CONTENT=%{{numero}}
+SET numero EVAL("var min = 2; var max = 205; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=ID:f_country CONTENT=%{{numero}}
+WAIT SECONDS=2
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registerForm ATTR=ID:login_user EXTRACT=TXTALL
+PROMPT "Digite um login, sugestão: {{!EXTRACT}}" !VAR1
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registerForm ATTR=ID:login_user CONTENT={{!VAR1}}
+TAG POS=1 TYPE=INPUT:BUTTON FORM=ID:registerForm ATTR=NAME:checkLogin
+WAIT SECONDS=3
+TAG POS=1 TYPE=INPUT:RADIO FORM=ID:registerForm ATTR=ID:f_login_domain_3
+SET !ENCRYPTION NO
+PROMPT "Digite uma senha." !VAR2
+TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:registerForm ATTR=ID:f_password CONTENT={{!VAR2}}
+TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:registerForm ATTR=ID:f_confirmPassword CONTENT={{!VAR2}}
+SET numero EVAL("var min = 11; var max = 2500; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registerForm ATTR=ID:f_phonesEmails CONTENT={{!VAR1}}{{numero}}@gmail.com
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:registerForm ATTR=ID:f_confirm CONTENT=YES
+SET !EXTRACT {{!VAR1}}@onet.eu:{{!VAR2}}<BR>
+'SAVEAS TYPE=EXTRACT FOLDER=* FILE=contas_p2m_fw.txt
