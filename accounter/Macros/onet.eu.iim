@@ -36,5 +36,5 @@ TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:registerForm ATTR=ID:f_confirmPassword CON
 SET numero EVAL("var min = 11; var max = 2500; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:registerForm ATTR=ID:f_phonesEmails CONTENT={{!VAR1}}{{numero}}@gmail.com
 TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:registerForm ATTR=ID:f_confirm CONTENT=YES
-SET !EXTRACT {{!VAR1}}@onet.eu:{{!VAR2}}<BR>
+SET !EXTRACT L: {{!VAR1}}@onet.eu<br>P: {{!VAR2}}<br><BR>
 SAVEAS TYPE=EXTRACT FOLDER=* FILE=contas_p2m_fw.txt
