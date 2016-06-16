@@ -1,5 +1,6 @@
 pasta para arquivos imacro.<br>
 <br>
+16/06/2016 -alterado modo de salvar para L: P:<br>
 -incluido onet.eu e o2.pl<br>
 -incluido camramail.com<br>
 <br>
