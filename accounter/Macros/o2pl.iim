@@ -40,5 +40,5 @@ PROMPT "digite uma senha com mais de 6 digitos, incluir letra maiuscula!" !VAR2
 TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:register-form ATTR=ID:haslo1 CONTENT={{!VAR2}}
 TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:register-form ATTR=ID:haslo2 CONTENT={{!VAR2}}
 TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:register-form ATTR=ID:regulamin CONTENT=YES
-SET !EXTRACT L:<SP>{{!VAR1}}@o2.pl<BR>P:<SP>{{!VAR2}}<BR>
+SET !EXTRACT L:<SP>{{!VAR1}}@o2.pl<LF><BR>P:<SP>{{!VAR2}}<LF><BR>
 SAVEAS TYPE=EXTRACT FOLDER=* FILE=contas_p2m_fw.txt
