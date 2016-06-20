@@ -1,0 +1,47 @@
+﻿
+
+VERSION BUILD=8970419 RECORDER=FX
+URL GOTO=https://profil.wp.pl/rejestracja.html?idu=99&serwis=nowa_poczta_wp&url=http%3A%2F%2Fpoczta.wp.pl%2Findexgwt.html%3Fflg%3D1
+
+SET nome EVAL("var min = 1; var max = 2218; var nome = Math.floor(Math.random() * (max - min + 1)) + min; nome;")
+SET sobrenome EVAL("var min = 1; var max = 1000; var sobrenome = Math.floor(Math.random() * (max - min + 1)) + min; sobrenome;")
+SET servidoremail EVAL("var min = 1; var max = 31; var servidoremail= Math.floor(Math.random() * (max - min + 1)) + min; servidoremail;")
+SET !EXTRACT_TEST_POPUP NO
+CMDLINE !DATASOURCE nomes.txt
+SET !DATASOURCE_COLUMNS 1
+SET !DATASOURCE_LINE {{nome}}
+SET !VAR1 {{!COL1}}
+CMDLINE !DATASOURCE sobrenomes.txt
+SET !DATASOURCE_COLUMNS 1
+SET !DATASOURCE_LINE {{sobrenome}}
+SET !VAR2 {{!COL1}}
+
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:firstName CONTENT={{!VAR1}}
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:lastName CONTENT={{!VAR2}}
+TAG POS=1 TYPE=INPUT:RADIO FORM=ID:regForm ATTR=ID:plec-mężczyzna
+SET numero EVAL("var min = 1; var max = 30; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:birthDateDay CONTENT={{numero}}
+SET numero EVAL("var min = 1; var max = 12; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:birthDateMonth CONTENT={{numero}}
+SET numero EVAL("var min = 1950; var max = 1995; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:birthDateYear CONTENT={{numero}}
+PROMPT "Digite um login" !VAR1
+EVENT TYPE=CLICK SELECTOR="#login" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#login" CHARS="{{!VAR1}}"
+TAG POS=1 TYPE=INPUT:RADIO FORM=ID:regForm ATTR=ID:darmowa
+SET !ENCRYPTION NO
+PROMPT "digite uma senha com mais de 8 digitos, incluir letra maiuscula!" !VAR2
+EVENT TYPE=CLICK SELECTOR="#password" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#password" CHARS="{{!VAR2}}"
+EVENT TYPE=CLICK SELECTOR="#passwordRepeat" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#passwordRepeat" CHARS="{{!VAR2}}"
+SET numero EVAL("var min = 1; var max = 4; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:regForm ATTR=ID:citySize CONTENT=%{{numero}}
+SET numero EVAL("var min = 1; var max = 4; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:regForm ATTR=ID:education CONTENT=%{{numero}}
+SET numero EVAL("var min = 1; var max = 10; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT FORM=ID:regForm ATTR=ID:job CONTENT=%{{numero}}
+TAG POS=1 TYPE=INPUT:CHECKBOX FORM=ID:regForm ATTR=ID:zgodaTerms CONTENT=YES
+EVENT TYPE=CLICK SELECTOR="#captchaCode" BUTTON=0
+SET !EXTRACT L:<SP>{{!VAR1}}@wp.pl<LF><BR>P:<SP>{{!VAR2}}<LF><BR>
+SAVEAS TYPE=EXTRACT FOLDER=* FILE=contas_p2m_fw.txt
