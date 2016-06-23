@@ -28,7 +28,9 @@ SET !ENCRYPTION NO
 PROMPT "Digite uma senha com 8 ou mais letras." !VAR2
 TAG POS=1 TYPE=INPUT:PASSWORD ATTR=TABINDEX:10 CONTENT={{!VAR2}}
 TAG POS=1 TYPE=INPUT:PASSWORD ATTR=TABINDEX:11 CONTENT={{!VAR2}}
-TAG POS=1 TYPE=SELECT ATTR=TABINDEX:13 CONTENT=%0
-TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:14 CONTENT=8745
+SET numero EVAL("var min = 0; var max = 8; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=SELECT ATTR=TABINDEX:13 CONTENT=%{{numero}}
+SET numero EVAL("var min = 16; var max = 2016; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:14 CONTENT={{numero}}
 SET !EXTRACT L:<SP>{{!VAR1}}@gmx.com<LF><BR>P:<SP>{{!VAR2}}<LF><BR>
 SAVEAS TYPE=EXTRACT FOLDER=* FILE=contas_p2m_fw.txt
