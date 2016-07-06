@@ -1,5 +1,6 @@
 pasta para arquivos imacro.<br>
 <br>
+05/07/2016 - Adicionado Mail.com e atualizado o limite do ano de nascimento de todos criadores.<br>
 20/06/2016 - Adicionado wp.pl e gmx.com<br>
 16/06/2016 -alterado modo de salvar para L: P:<br>
 -incluido onet.eu e o2.pl<br>
