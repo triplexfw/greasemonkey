@@ -23,7 +23,7 @@ SET numero EVAL("var min = 1; var max = 30; var numero = Math.floor(Math.random(
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:birthDateDay CONTENT={{numero}}
 SET numero EVAL("var min = 1; var max = 12; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:birthDateMonth CONTENT={{numero}}
-SET numero EVAL("var min = 1950; var max = 1995; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+SET numero EVAL("var min = 1970; var max = 2000; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:regForm ATTR=ID:birthDateYear CONTENT={{numero}}
 PROMPT "Digite um login" !VAR1
 EVENT TYPE=CLICK SELECTOR="#login" BUTTON=0

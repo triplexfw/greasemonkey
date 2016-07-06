@@ -18,7 +18,7 @@ SET numero EVAL("var min = 10; var max = 25; var numero = Math.floor(Math.random
 TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=ID:f_birthDate_day CONTENT=%{{numero}}
 SET numero EVAL("var min = 1; var max = 12; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=NAME:birthDate[month] CONTENT=%{{numero}}
-SET numero EVAL("var min = 1950; var max = 2000; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+SET numero EVAL("var min = 1970; var max = 2000; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=NAME:birthDate[year] CONTENT=%{{numero}}
 SET numero EVAL("var min = 2; var max = 205; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=SELECT FORM=ID:registerForm ATTR=ID:f_country CONTENT=%{{numero}}

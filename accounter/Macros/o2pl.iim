@@ -13,7 +13,7 @@ SET !EXTRACT_TEST_POPUP NO
  SET !VAR2 {{!COL1}}
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register-form ATTR=ID:imie CONTENT={{!VAR1}}
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register-form ATTR=ID:nazwisko CONTENT={{!VAR2}}
-SET numero EVAL("var min = 1915; var max = 2000; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+SET numero EVAL("var min = 1970; var max = 2000; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=INPUT:TEXT FORM=ID:register-form ATTR=ID:rok CONTENT={{numero}}
 SET numero EVAL("var min = 1; var max = 2; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=SELECT FORM=ID:register-form ATTR=ID:plec CONTENT=%{{numero}}

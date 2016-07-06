@@ -19,7 +19,7 @@ SET numero EVAL("var min = 10; var max = 25; var numero = Math.floor(Math.random
 TAG POS=1 TYPE=SELECT ATTR=TABINDEX:4 CONTENT=%{{numero}}
 SET numero EVAL("var min = 1; var max = 12; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=SELECT ATTR=TABINDEX:5 CONTENT=%{{numero}}
-SET numero EVAL("var min = 16; var max = 76; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
+SET numero EVAL("var min = 16; var max = 46; var numero = Math.floor(Math.random() * (max - min + 1)) + min; numero;")
 TAG POS=1 TYPE=SELECT ATTR=TABINDEX:6 CONTENT=%{{numero}}
 PROMPT "Digite um login" !VAR1
 TAG POS=1 TYPE=INPUT:TEXT ATTR=TABINDEX:8 CONTENT={{!VAR1}}
