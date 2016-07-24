@@ -17,11 +17,11 @@ function iniciar() {
  if (linkado) { 
   var janela = document.createElement('ul');
  
-               janela.style = 'top: 50%; left: 95%; position: fixed; margin: -30px 0 0 -50px; width: 70px; height: 15px; ' +
+               janela.style = 'top: 50%; left: 95%; position: fixed; margin: -30px 0 0 -50px; width: 100px; height: 15px; ' +
                  'padding: 20px; background: #fff; z-index: 999999999;';
               
-               janela.innerHTML = '<button type="button" onclick="location.hash=\'#upload_check_all\'">link</button>' +
-               '<button type="button" onclick="location.hash=\'#postlist\'">topo</button>';
+               janela.innerHTML = '<button type="button" onclick="location.hash=\'#upload_check_all\'">LINK</button>&nbsp;&nbsp;&nbsp;' +
+               '<button type="button" onclick="location.hash=\'#postlist\'">TOPO</button>';
               janela.setAttribute('id', 'novo');
             var elemento =  document.body.appendChild(janela); 
   
