@@ -29,4 +29,7 @@ function iniciar() {
            $(cf).after(elemento); 
   }
  }
-setTimeout(iniciar, 3000);
+setTimeout(iniciar, 2000);
+setTimeout(iniciar, 5000);
+setTimeout(iniciar, 10000);
+setTimeout(iniciar, 20000);
