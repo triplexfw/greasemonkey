@@ -2,13 +2,14 @@
 // @name        MP Filewarez
 // @namespace   634c902e418bb4d9bb4760064269240a
 // @description MP
+// @include     http://filewarez.tv/private.php?do=newpm*
 // @include     http://www.filewarez.tv/private.php?do=newpm*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.07
+// @version     1.09
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
-// @updateURL   https://monkeyguts.com/719.meta.js?c
-// @downloadURL https://monkeyguts.com/719.user.js?c
+// @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
+// @downloadURL https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
 // ==/UserScript==
 function criarDropDownMenu() {
   var textpara = document.getElementById('pmrecips_ctrl');
@@ -27,21 +28,21 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--Download no Gdrive',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nVocÍ tentou baixar no gdrive mas n„o conseguiu?\n' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nVoc√™ tentou baixar no gdrive mas n√£o conseguiu?\n' +
         'Temos um tutorial que ensina a baixar mesmo com o gdrive bloqueando o arquivo que ao verificar estava online.\n\n' +
         'Veja:\n' +
-        '[url]http://www.filewarez.tv/showthread.php?t=663102[/url]\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        '[url]http://filewarez.tv/showthread.php?t=663102[/url]\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
         'titulo': '--Link Fora das Regras',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nO(s) link(s) que vocÍ postou est·(„o) em [B]desacordo com as nossas regras[/B]' +
-        ' e por isso foi(ram) [B]removido(s)[/B].\nPara [B]evitar futuros transtornos[/B] È imprescindÌvel que [B]conheÁa' +
-        ' nossas normas[/B]:\n\n[URL="http://www.filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento' +
-        ' Geral do FÛrum[/COLOR][/URL];\n[URL="http://www.filewarez.tv/showthread.php?t=355838"][COLOR=#3366ff]' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nO(s) link(s) que voc√™ postou est√°(√£o) em [B]desacordo com as nossas regras[/B]' +
+        ' e por isso foi(ram) [B]removido(s)[/B].\nPara [B]evitar futuros transtornos[/B] √© imprescind√≠vel que [B]conhe√ßa' +
+        ' nossas normas[/B]:\n\n[URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento' +
+        ' Geral do F√≥rum[/COLOR][/URL];\n[URL="http://filewarez.tv/showthread.php?t=355838"][COLOR=#3366ff]' +
         'Regras de Uploads da Comunidade[/COLOR][/URL].\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
@@ -51,11 +52,11 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--link Mailshare',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nEste  [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] que vocÍ est· tentando baixar foi compartilhado atravÈs do programa [B]MailShare[/B]' +
-        ' e vocÍ precisar· dele para realizar o download. Nos links abaixo vocÍ tem o tutorial para download e utilizaÁ„o do programa' +
-        ' e tambÈm o tÛpico para tirar d˙vidas.\n\nLinks:\n[url]http://www.filewarez.tv/showthread.php?t=165119[/url]\n' +
-        '[url]http://www.filewarez.tv/showthread.php?t=480347[/url]\n\n' +
-        'Em caso de outras d˙vidas estou a disposiÁ„o.\n\n' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nEste  [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] que voc√™ est√° tentando baixar foi compartilhado atrav√©s do programa [B]MailShare[/B]' +
+        ' e voc√™ precisar√° dele para realizar o download. Nos links abaixo voc√™ tem o tutorial para download e utiliza√ß√£o do programa' +
+        ' e tamb√©m o t√≥pico para tirar d√∫vidas.\n\nLinks:\n[url]http://filewarez.tv/showthread.php?t=165119[/url]\n' +
+        '[url]http://filewarez.tv/showthread.php?t=480347[/url]\n\n' +
+        'Em caso de outras d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
@@ -65,31 +66,31 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--Links/Contas Online',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nO(s) link(s) HTTP / hash code(s) P2M do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] foi(ram)' +
-        ' verificado(s) por mim e est·(„o) [B]online(s) e funcional(is)[/B].\n\nCaso vocÍ esteja tentando fazer download de link http' +
-        ' GDRIVE e estiver recebendo mensagens como Not Found ou a cota m·xima de download foi atingida, veja o [URL="http://www.filewarez.' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nO(s) link(s) HTTP / hash code(s) P2M do [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] foi(ram)' +
+        ' verificado(s) por mim e est√°(√£o) [B]online(s) e funcional(is)[/B].\n\nCaso voc√™ esteja tentando fazer download de link http' +
+        ' GDRIVE e estiver recebendo mensagens como Not Found ou a cota m√°xima de download foi atingida, veja o [URL="http://filewarez.' +
         'tv/showthread.php?t=663102"][COLOR=#3366ff]tutorial de como baixar no GDRIVE[/COLOR][/URL].\n\n[B]DICA:[/B]' +
-        ' N„o faÁa download de arquivos grandes por navegador. Sempre que possÌvel use um gerenciador de download, como Free Download Manager,' +
-        ' Internet Download Manager, jDownloader entre outros. Assim vocÍ diminui consideravelmente as chances do arquivo se corromper no download.\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        ' N√£o fa√ßa download de arquivos grandes por navegador. Sempre que poss√≠vel use um gerenciador de download, como Free Download Manager,' +
+        ' Internet Download Manager, jDownloader entre outros. Assim voc√™ diminui consideravelmente as chances do arquivo se corromper no download.\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
         'titulo': '--Links/Contas Offline',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nO(s) link(s) HTTP / hash code(s) P2M do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] foi(ram)' +
-        ' verificado(s) por mim e realmente est·(„o) [B]offline(s)[/B]. Infelizmente o Uploader n„o term condiÁıes de reupa-lo(s) e por' +
-        ' isso o upload foi [B]apagado[/B].\n\nObrigado(a) pela sua contribuiÁ„o.\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nO(s) link(s) HTTP / hash code(s) P2M do [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] foi(ram)' +
+        ' verificado(s) por mim e realmente est√°(√£o) [B]offline(s)[/B]. Infelizmente o Uploader n√£o term condi√ß√µes de reupa-lo(s) e por' +
+        ' isso o upload foi [B]apagado[/B].\n\nObrigado(a) pela sua contribui√ß√£o.\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
         'titulo': '--Arquivos checados',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nVc tentou baixar deste link e n„o conseguiu?\n [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] \n\n' +
-        ' NÛs fizemos o teste, baixamos o arquivo e funcionou 100%. Este arquivo est· hospedado no ' + tagurl2 + '.\n\n' +
-        'Para garantir o sucesso do seu download recomendamos que vocÍ use um gerenciador de download.\n' +
-        'Sempre que possÌvel use um gerenciador de download, como Free Download Manager,' +
-        'Internet Download Manager, jDownloader entre outros. Assim vocÍ diminui consideravelmente as chances do arquivo se corromper no download.\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nVc tentou baixar deste link e n√£o conseguiu?\n [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] \n\n' +
+        ' N√≥s fizemos o teste, baixamos o arquivo e funcionou 100%. Este arquivo est√° hospedado no ' + tagurl2 + '.\n\n' +
+        'Para garantir o sucesso do seu download recomendamos que voc√™ use um gerenciador de download.\n' +
+        'Sempre que poss√≠vel use um gerenciador de download, como Free Download Manager,' +
+        'Internet Download Manager, jDownloader entre outros. Assim voc√™ diminui consideravelmente as chances do arquivo se corromper no download.\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       
@@ -100,30 +101,30 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--Imagem Online',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nA(s) imagem(ns) do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] foi(ram) verificada(s) por mim' +
-        ' e est·(„o) [B]online(s) e funcional(is)[/B]. Verifique se n„o È a sua [B]conex„o com a Internet[/B] ou o cache do seu [B]navegador[/B].\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nA(s) imagem(ns) do [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] foi(ram) verificada(s) por mim' +
+        ' e est√°(√£o) [B]online(s) e funcional(is)[/B]. Verifique se n√£o √© a sua [B]conex√£o com a Internet[/B] ou o cache do seu [B]navegador[/B].\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
         'titulo': '--Imagem Offline',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nA(s) imagem(ns) do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] foi(ram) verificada(s) por mim' +
-        ' e realmente est·(„o) [B]offline(s)[/B]. Infelizmente o Uploader n„o tem condiÁıes de reupa-la(s) e por isso o tÛpico foi [B]apagado[/B].\n\n' +
-        'Obrigado(a) pela sua contribuiÁ„o.\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nA(s) imagem(ns) do [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] foi(ram) verificada(s) por mim' +
+        ' e realmente est√°(√£o) [B]offline(s)[/B]. Infelizmente o Uploader n√£o tem condi√ß√µes de reupa-la(s) e por isso o t√≥pico foi [B]apagado[/B].\n\n' +
+        'Obrigado(a) pela sua contribui√ß√£o.\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
-        'titulo': '--Assinatura Fora dos Padrıes',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nSua assinatura foi [B]removida[/B] por estar [B]fora de um ou mais padrıes' +
-        '[/B] estabelecidos no [URL="http://www.filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento ' +
-        'Geral do FÛrum[/COLOR][/URL]:\n\n- Tamanho m·ximo permitido: 500kb;\n- ResoluÁ„o m·xima: 500 x 300 (largura x altura' +
-        ');\n- [B]Proibida[/B] a utilizaÁ„o de textos ou links direcionados a outros sites ou fÛruns com conte˙do warez ou que' +
-        ' contenham links copiados do site FileWarez;\n- [B]Proibida[/B] a utilizaÁ„o de imagens com propagandas, de conte˙do' +
-        ' adulto, obsceno, vulgar ou que incite qualquer forma de violÍncia, discriminaÁ„o ou difamaÁ„o;\n\nPara maiores informaÁıes,' +
-        ' leia o [URL="http://www.filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento Geral do FÛrum[/COLOR]' +
+        'titulo': '--Assinatura Fora dos Padr√µes',
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nSua assinatura foi [B]removida[/B] por estar [B]fora de um ou mais padr√µes' +
+        '[/B] estabelecidos no [URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento ' +
+        'Geral do F√≥rum[/COLOR][/URL]:\n\n- Tamanho m√°ximo permitido: 500kb;\n- Resolu√ß√£o m√°xima: 500 x 300 (largura x altura' +
+        ');\n- [B]Proibida[/B] a utiliza√ß√£o de textos ou links direcionados a outros sites ou f√≥runs com conte√∫do warez ou que' +
+        ' contenham links copiados do site FileWarez;\n- [B]Proibida[/B] a utiliza√ß√£o de imagens com propagandas, de conte√∫do' +
+        ' adulto, obsceno, vulgar ou que incite qualquer forma de viol√™ncia, discrimina√ß√£o ou difama√ß√£o;\n\nPara maiores informa√ß√µes,' +
+        ' leia o [URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento Geral do F√≥rum[/COLOR]' +
         '[/URL].\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
@@ -132,31 +133,31 @@ function criarDropDownMenu() {
         'estilo': 'color: black; text-align: center; clear: both; font-weight: bold;'
       },
       {
-        'titulo': '--¡rea Incorreta',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nSeu [url\=\"' + tagurl + '\"][COLOR=#3366ff]tÛpico/upload[/COLOR][/url] foi movido ' +
-        'por estar numa [B]·rea incorreta[/B].\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'titulo': '--√Årea Incorreta',
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nSeu [url\=\"' + tagurl + '\"][COLOR=#3366ff]t√≥pico/upload[/COLOR][/url] foi movido ' +
+        'por estar em uma [B]√°rea incorreta[/B].\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
-        'titulo': '--Propaganda n„o Autorizada',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nSeu tÛpico/upload foi [B]removido[/B] por conter [B]propaganda n„o autorizada[/B].\n\n' +
-        'De acordo com o nosso [URL="http://www.filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento Geral do FÛrum' +
-        '[/COLOR][/URL] È proibida a veiculaÁ„o de qualquer propaganda, an˙ncios de vendas ou trocas, mensagens de "ganhe dinheiro f·cil",' +
-        ' pir‚mides, spam, links e quaisquer outros meios para a obtenÁ„o de vantagens pessoais, assim como tÛpicos, mensagens ou links que visem' +
-        ' enganar o usu·rio.\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'titulo': '--Propaganda n√£o Autorizada',
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nSeu t√≥pico/upload foi [B]removido[/B] por conter [B]propaganda n√£o autorizada[/B].\n\n' +
+        'De acordo com o nosso [URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento Geral do F√≥rum' +
+        '[/COLOR][/URL] √© proibida a veicula√ß√£o de qualquer propaganda, an√∫ncios de vendas ou trocas, mensagens de "ganhe dinheiro f√°cil",' +
+        ' pir√¢mides, spam, links e quaisquer outros meios para a obten√ß√£o de vantagens pessoais, assim como t√≥picos, mensagens ou links que visem' +
+        ' enganar o usu√°rio.\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       },
       {
-        'titulo': '--Bot„o errado',
-        'mensagem': 'Ol· ' + textpara.innerHTML + '\n\nVocÍ clicou no bot„o errado para enviar uma mensagem de agradecimento.\n' +
-        'Para responder um post e/ou enviar uma mensagem de agradecimento em um UP vocÍ sempre deve clicar no item chamado' +
+        'titulo': '--Bot√£o errado',
+        'mensagem': 'Ol√° ' + textpara.innerHTML + '\n\nVoc√™ clicou no bot√£o errado para enviar uma mensagem de agradecimento.\n' +
+        'Para responder um post e/ou enviar uma mensagem de agradecimento em um UP voc√™ sempre deve clicar no item chamado' +
         ' [b]Responder[/b] que fica no lado direito inferior.\n\n' +
         'Veja:\n[img]http://s28.postimg.org/x1q2ixb1p/reponder.jpg[/img]\n\n' +
-        'Este bot„o que vocÍ clicou errado: [img]http://s28.postimg.org/vqirttwdl/reportar.jpg[/img]\n' +
+        'Este bot√£o que voc√™ clicou errado: [img]http://s28.postimg.org/vqirttwdl/reportar.jpg[/img]\n' +
         'serve apenas para relatar mensagens ofensivas, spams e outros problemas.\n\n' +
-        'Em caso de d˙vidas estou a disposiÁ„o.\n\n' +
+        'Em caso de d√∫vidas estou a disposi√ß√£o.\n\n' +
         'Att.\n' + nickme[1]
       }
     ]
@@ -167,7 +168,7 @@ function criarDropDownMenu() {
   var elemento = document.createElement('option');
   elemento.selected = true;
   elemento.disabled = true;
-  elemento.textContent = 'MPs Padr„o para Reports';
+  elemento.textContent = 'MPs Padr√£o para Reports';
   elementoSelect.appendChild(elemento);
   for (var i = 0; i < mp.mensagens.length; ++i) {
     var tituloDaMensagem = mp.mensagens[i].titulo;
@@ -177,19 +178,28 @@ function criarDropDownMenu() {
     elemento.style = mp.mensagens[i].estilo;
     elementoSelect.appendChild(elemento);
   }
-  $(elementoSelect).change(function () {
+   $(elementoSelect).change(function () {    
+    var topicUrl, servers;
     var indiceSelecionado = this.selectedIndex;
-    if ((indiceSelecionado > 0) && (mp.mensagens[indiceSelecionado - 1].separador !== 'on')) {
-      if (mp.mensagens[indiceSelecionado - 1].mensagem.match(/topicourl1/g)) { var tagurl1 = prompt('Digite a URL do topico', '');
-  var tagon = 'on'  }
-      if (mp.mensagens[indiceSelecionado - 1].mensagem.match(/topicourl2/g)) { var tagurl2 = prompt('Digite o(s) servidor(es) que vc testou o arquivo.', '');
-   var tagon = 'on' }
-      if (tagon == 'on') { unsafeWindow.vB_Editor.vB_Editor_001.editor.setData(mp.mensagens[indiceSelecionado - 1].mensagem.replace(/topicourl2/g, tagurl2).replace(/topicurl1/g, tagurl1)); }                                                                                
-      else { unsafeWindow.vB_Editor.vB_Editor_001.editor.setData(mp.mensagens[indiceSelecionado - 1].mensagem); }
-      $('#title').val(mp.mensagens[indiceSelecionado -1].titulo.replace('--', ''));
-  //    this.options[0].selected = 'selected'; // reseta opÁ„o selecionada
+    var msg_obj = mp.mensagens[indiceSelecionado - 1];
+    var msg = msg_obj.mensagem;
+    if (indiceSelecionado > 0 && !msg_obj.separador) {  
+      if (msg.indexOf(tagurl) > -1) {      
+        topicUrl = prompt('Digite a URL do topico', '');       
+        msg = msg.replace(new RegExp(tagurl, 'g'), topicUrl);
+      }
+      if (msg.indexOf(tagurl2) > - 1) {
+        servers = prompt('Digite o(s) servidor(es) que vc testou o arquivo.', ''); 
+        msg = msg.replace(new RegExp(tagurl2, 'g'), servers);
+      }     
+      unsafeWindow.vB_Editor.vB_Editor_001.editor.setData(msg);
+      $('#title').val(msg_obj.titulo.replace('--', ''));      
     }
-  })
+    else {
+      this.options[0].selected = 'selected'; // reseta op√ß√£o selecionada
+    }
+  });
+  
   return elementoSelect;
 }
 function adicionarDropDownMenu() {
