@@ -5,7 +5,7 @@
 // @include     http://filewarez.tv/private.php?do=newpm*
 // @include     http://www.filewarez.tv/private.php?do=newpm*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.09
+// @version     1.10
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -18,7 +18,7 @@ function criarDropDownMenu() {
   var nickme = re.exec(nickmehtml)
   var tagurl = 'topicourl1'
   var tagurl2 = 'topicourl2'
-  
+
   var mp = {
     'mensagens': [
       {
@@ -39,8 +39,8 @@ function criarDropDownMenu() {
         'titulo': '--Link Fora das Regras',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO(s) link(s) que você postou está(ão) em [B]desacordo com as nossas regras[/B]' +
         ' e por isso foi(ram) [B]removido(s)[/B].\nPara [B]evitar futuros transtornos[/B] é imprescindível que [B]conheça' +
-        ' nossas normas[/B]:\n\n[URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento' +
-        ' Geral do Fórum[/COLOR][/URL];\n[URL="http://filewarez.tv/showthread.php?t=355838"][COLOR=#3366ff]' +
+        ' nossas normas[/B]:\n\n[URL="http://filewarez.tv/announcement.php?f=104&a=4"][COLOR=#3366ff]Regulamento' +
+        ' do Fórum[/COLOR][/URL];\n[URL="http://filewarez.tv/announcement.php?f=104&a=4"][COLOR=#3366ff]' +
         'Regras de Uploads da Comunidade[/COLOR][/URL].\n\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
@@ -93,7 +93,7 @@ function criarDropDownMenu() {
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
       },
-      
+
       {
         'titulo': '==------Imagens------==',
         'separador': 'on',
@@ -117,12 +117,12 @@ function criarDropDownMenu() {
       {
         'titulo': '--Assinatura Fora dos Padrões',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nSua assinatura foi [B]removida[/B] por estar [B]fora de um ou mais padrões' +
-        '[/B] estabelecidos no [URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento ' +
-        'Geral do Fórum[/COLOR][/URL]:\n\n- Tamanho máximo permitido: 500kb;\n- Resolução máxima: 500 x 300 (largura x altura' +
+        '[/B] estabelecidos no [URL="http://filewarez.tv/announcement.php?f=104&a=4"][COLOR=#3366ff]Regulamento ' +
+        'do Fórum[/COLOR][/URL]:\n\n- Tamanho máximo permitido: 500kb;\n- Resolução máxima: 500 x 300 (largura x altura' +
         ');\n- [B]Proibida[/B] a utilização de textos ou links direcionados a outros sites ou fóruns com conteúdo warez ou que' +
         ' contenham links copiados do site FileWarez;\n- [B]Proibida[/B] a utilização de imagens com propagandas, de conteúdo' +
         ' adulto, obsceno, vulgar ou que incite qualquer forma de violência, discriminação ou difamação;\n\nPara maiores informações,' +
-        ' leia o [URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento Geral do Fórum[/COLOR]' +
+        ' leia o [URL="http://filewarez.tv/announcement.php?f=104&a=4"][COLOR=#3366ff]Regulamento do Fórum[/COLOR]' +
         '[/URL].\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
@@ -142,7 +142,7 @@ function criarDropDownMenu() {
       {
         'titulo': '--Propaganda não Autorizada',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nSeu tópico/upload foi [B]removido[/B] por conter [B]propaganda não autorizada[/B].\n\n' +
-        'De acordo com o nosso [URL="http://filewarez.tv/showthread.php?t=355842"][COLOR=#3366ff]Regulamento Geral do Fórum' +
+        'De acordo com o nosso [URL="http://filewarez.tv/announcement.php?f=104&a=4"][COLOR=#3366ff]Regulamento do Fórum' +
         '[/COLOR][/URL] é proibida a veiculação de qualquer propaganda, anúncios de vendas ou trocas, mensagens de "ganhe dinheiro fácil",' +
         ' pirâmides, spam, links e quaisquer outros meios para a obtenção de vantagens pessoais, assim como tópicos, mensagens ou links que visem' +
         ' enganar o usuário.\n\n' +
@@ -178,28 +178,28 @@ function criarDropDownMenu() {
     elemento.style = mp.mensagens[i].estilo;
     elementoSelect.appendChild(elemento);
   }
-   $(elementoSelect).change(function () {    
+   $(elementoSelect).change(function () {
     var topicUrl, servers;
     var indiceSelecionado = this.selectedIndex;
     var msg_obj = mp.mensagens[indiceSelecionado - 1];
     var msg = msg_obj.mensagem;
-    if (indiceSelecionado > 0 && !msg_obj.separador) {  
-      if (msg.indexOf(tagurl) > -1) {      
-        topicUrl = prompt('Digite a URL do topico', '');       
+    if (indiceSelecionado > 0 && !msg_obj.separador) {
+      if (msg.indexOf(tagurl) > -1) {
+        topicUrl = prompt('Digite a URL do topico', '');
         msg = msg.replace(new RegExp(tagurl, 'g'), topicUrl);
       }
       if (msg.indexOf(tagurl2) > - 1) {
-        servers = prompt('Digite o(s) servidor(es) que vc testou o arquivo.', ''); 
+        servers = prompt('Digite o(s) servidor(es) que vc testou o arquivo.', '');
         msg = msg.replace(new RegExp(tagurl2, 'g'), servers);
-      }     
+      }
       unsafeWindow.vB_Editor.vB_Editor_001.editor.setData(msg);
-      $('#title').val(msg_obj.titulo.replace('--', ''));      
+      $('#title').val(msg_obj.titulo.replace('--', ''));
     }
     else {
       this.options[0].selected = 'selected'; // reseta opção selecionada
     }
   });
-  
+
   return elementoSelect;
 }
 function adicionarDropDownMenu() {
@@ -207,7 +207,7 @@ function adicionarDropDownMenu() {
   var navegador = navigator.userAgent.match(/Firefox/g)
   if (navegador == 'Firefox') {
     var browsercke = 'span.cke_browser_gecko'
-  } 
+  }
   else {
     var browsercke = 'span.cke_browser_webkit'
   }
