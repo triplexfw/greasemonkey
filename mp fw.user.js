@@ -5,7 +5,7 @@
 // @include     http://filewarez.tv/private.php?do=newpm*
 // @include     http://www.filewarez.tv/private.php?do=newpm*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.10
+// @version     1.11
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -151,7 +151,8 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--Botão errado',
-        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê clicou no botão errado para enviar uma mensagem de agradecimento.\n' +
+        'mensagem': 'Obrigado por participar do fórum e um muito obrigado por lembrar de agradecer a galera pelo arquivo '+
+        'disponibilizado, porém você clicou no botão errado para enviar uma mensagem de agradecimento.\n' +
         'Para responder um post e/ou enviar uma mensagem de agradecimento em um UP você sempre deve clicar no item chamado' +
         ' [b]Responder[/b] que fica no lado direito inferior.\n\n' +
         'Veja:\n[img]http://s28.postimg.org/x1q2ixb1p/reponder.jpg[/img]\n\n' +
