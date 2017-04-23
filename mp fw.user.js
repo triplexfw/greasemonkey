@@ -2,10 +2,10 @@
 // @name        MP Filewarez
 // @namespace   634c902e418bb4d9bb4760064269240a
 // @description MP
-// @include     http://filewarez.tv/private.php?do=newpm*
-// @include     http://www.filewarez.tv/private.php?do=newpm*
+// @include     https://filewarez.tv/private.php?do=newpm*
+// @include     https://www.filewarez.tv/private.php?do=newpm*
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.11
+// @version     1.12
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
