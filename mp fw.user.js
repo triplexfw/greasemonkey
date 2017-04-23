@@ -2,8 +2,7 @@
 // @name        MP Filewarez
 // @namespace   634c902e418bb4d9bb4760064269240a
 // @description MP
-// @include     https://filewarez.tv/private.php?do=newpm*
-// @include     https://www.filewarez.tv/private.php?do=newpm*
+// @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
 // @version     1.12
 // @grant       unsafeWindow
