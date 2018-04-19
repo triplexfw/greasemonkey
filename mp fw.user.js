@@ -4,7 +4,8 @@
 // @description MP
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/private\.php\?do\=newpm.*$/
-// @version     1.14
+// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+// @version     1.15
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -230,4 +231,5 @@ function adicionarDropDownMenu() {
   ' span.cke_wrapper.cke_ltr table.cke_editor tbody tr td#cke_top_vB_Editor_001_editor.cke_top div.cke_toolbox span#cke_17.cke_toolbar';
   $(div_id__cke_17).after(elemento);
 }
+
 setTimeout(adicionarDropDownMenu, 3000);
