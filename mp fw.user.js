@@ -5,7 +5,7 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/private\.php\?do\=newpm.*$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.15
+// @version     1.16
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -155,8 +155,8 @@ function criarDropDownMenu() {
         'disponibilizado, porém você clicou no botão errado para enviar uma mensagem de agradecimento.\n' +
         'Para responder um post e/ou enviar uma mensagem de agradecimento em um UP você sempre deve clicar no item chamado' +
         ' [b]Responder[/b] que fica no lado direito inferior.\n\n' +
-        'Veja:\n[img]http://s28.postimg.org/x1q2ixb1p/reponder.jpg[/img]\n\n' +
-        'Este botão que você clicou errado: [img]http://s28.postimg.org/vqirttwdl/reportar.jpg[/img]\n' +
+        'Veja:\n[img]https://tinyurl.com/y9k2moca[/img]\n\n' +
+        'Este botão que você clicou errado: [img]https://tinyurl.com/ybsulvrf[/img]\n' +
         'serve apenas para relatar mensagens ofensivas, spams e outros problemas.\n\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
