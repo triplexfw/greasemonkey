@@ -6,7 +6,7 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/.*$/
 // @updateURL   https://raw.githubusercontent.com/triplexfw/greasemonkey/master/fwp2m.meta.js
 // @downloadURL https://raw.githubusercontent.com/triplexfw/greasemonkey/master/fwp2m.user.js
-// @version     1.24
+// @version     1.25
 // @grant       none
 // @run-at      document-start
 // ==/UserScript==
