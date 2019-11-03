@@ -5,7 +5,7 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/private\.php\?do\=newpm.*$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.16
+// @version     1.17
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -30,11 +30,34 @@ function criarDropDownMenu() {
         'titulo': '--Download no Gdrive',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê tentou baixar no gdrive mas não conseguiu?\n' +
         'Temos um tutorial que ensina a baixar mesmo com o gdrive bloqueando o arquivo que ao verificar estava online.\n\n' +
-        'Veja:\n' +
+        '[b]Veja:[/b]\n' +
         '[url]http://filewarez.tv/showthread.php?t=663102[/url]\n\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
       },
+	  {
+	    'titulo': '--Download Gdrive + P2I',
+        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê tentou baixar no gdrive mas não conseguiu?\n' +
+        'Temos um tutorial que ensina a baixar mesmo com o gdrive bloqueando o arquivo que ao verificar estava online.\n\n' +
+        '[b]Veja:[/b]\n' +
+        '[url]http://filewarez.tv/showthread.php?t=663102[/url]\n\n' +
+		'Este Up que você quer baixar, também está com [b]LINK P2I[/b], abaixo estou colocando o tutorial sobre o P2I, e como baixa-lo.\n' +
+		'[b]Veja:[/b]\n' +
+		'[url]http://filewarez.tv/showthread.php?t=787580[/url]\n\n' +
+		'[u]Entenda[/u] que geralmente os cracks são acusados de vírus, e o Google sempre bloqueia quando não está compactado corretamente, importando para a sua conta, você consegue baixar, por isso peço novamente que veja o tutorial do primeiro link.\n\n' +
+
+        'Em caso de dúvidas estou a disposição.\n\n' +
+        'Att.\n' + nickme[1]
+	  },
+	  {
+	    'titulo': '--Download P2I',
+        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê tentou baixar no formato [b]P2I[/b] mas não conseguiu?\n' +
+        'Temos um tutorial que ensina a baixar este tipo de upload.\n' +
+		'[url]http://filewarez.tv/showthread.php?t=787580[/url]\n' +
+        'Em caso de dúvidas estou a disposição.\n\n' +
+        'Att.\n' + nickme[1]
+	  },
+	  
       {
         'titulo': '--Link Fora das Regras',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO(s) link(s) que você postou está(ão) em [B]desacordo com as nossas regras[/B]' +
@@ -45,11 +68,25 @@ function criarDropDownMenu() {
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
       },
+	  {
+	    'titulo': '--Up com menção a Filewarez',
+		'mensagem': 'Olá ' + textpara.innerHTML + ', seu Upload [b]título_do_tópico_aqui[/b]\n' +
+		'tem menção a Filewarez(fw) no arquivo [b]nome_do_arquivo_aqui[/b]\n' +
+		'você precisa remover o [b]menção_a_fw_no_arquivo_aqui[/b] pois segundo as regras é proibido upar com menção a filewarez, para preservar o fórum.Peço que atualize o nome do arquivo para que seu Up possa ser aprovado.\n' +
+        'Em caso de dúvidas estou a disposição.\n\n' +
+        'Att.\n' + nickme[1]
+	  },
       {
-        'titulo': '==------P2M------==',
+        'titulo': '==------P2M/P2I------==',
         'separador': 'on',
         'estilo': 'color: #33CC33; text-align: center; clear: both; font-weight: bold;'
       },
+	  {
+	    'titulo': '--link p2m para p2i',
+		'mensagem': 'Olá ' + textpara.innerHTML + '\n\nEste [url\=\"' + tagurl + '\"][COLor=#3366ff]tópico/upload[/COLOR][/url] que você está tentando baixar está sendo reupado para p2i.\n' +
+		'Assim que ficar pronto, você será informado através da marcação do novo upload.\n\n' +
+		'Att.\n' + nickme[1]
+	  },
       {
         'titulo': '--link Mailshare',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nEste  [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] que você está tentando baixar foi compartilhado através do programa [B]MailShare[/B]' +
@@ -66,7 +103,7 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--Links/Contas Online',
-        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO(s) link(s) HTTP / hash code(s) P2M do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] foi(ram)' +
+        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO link HTTP do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] foi(ram)' +
         ' verificado(s) por mim e está(ão) [B]online(s) e funcional(is)[/B].\n\nCaso você esteja tentando fazer download de link http' +
         ' GDRIVE e estiver recebendo mensagens como Not Found ou a cota máxima de download foi atingida, veja o [URL="http://filewarez.' +
         'tv/showthread.php?t=663102"][COLOR=#3366ff]tutorial de como baixar no GDRIVE[/COLOR][/URL].\n\n[B]DICA:[/B]' +
@@ -77,7 +114,7 @@ function criarDropDownMenu() {
       },
       {
         'titulo': '--Links/Contas Offline',
-        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO(s) link(s) HTTP / hash code(s) P2M do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] foi(ram)' +
+        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO link HTTP do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] foi(ram)' +
         ' verificado(s) por mim e realmente está(ão) [B]offline(s)[/B]. Infelizmente o Uploader não term condições de reupa-lo(s) e por' +
         ' isso o upload foi [B]apagado[/B].\n\nObrigado(a) pela sua contribuição.\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
