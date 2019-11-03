@@ -4,8 +4,8 @@
 // @description filewarez p2m
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/.*$/
-// @updateURL   https://raw.githubusercontent.com/triplexfw/greasemonkey/master/fwp2m.meta.js
-// @downloadURL https://raw.githubusercontent.com/triplexfw/greasemonkey/master/fwp2m.user.js
+// @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/fwp2m.meta.js
+// @downloadURL https://github.com/triplexfw/greasemonkey/raw/master/fwp2m.user.js
 // @version     1.25
 // @grant       none
 // @run-at      document-start
