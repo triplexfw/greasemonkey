@@ -5,11 +5,12 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/private\.php\?do\=newpm.*$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.17
+// @version     1.18
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
 // @downloadURL https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
+// @run-at      document-idle
 // ==/UserScript==
 function criarDropDownMenu() {
   var textpara = document.getElementById('pmrecips_ctrl');
@@ -269,4 +270,4 @@ function adicionarDropDownMenu() {
   $(div_id__cke_17).after(elemento);
 }
 
-setTimeout(adicionarDropDownMenu, 3000);
+setTimeout(adicionarDropDownMenu, 2000);
