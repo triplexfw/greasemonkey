@@ -5,7 +5,7 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/private\.php\?do\=newpm.*$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.18
+// @version     1.19
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -30,7 +30,7 @@ function criarDropDownMenu() {
       {
         'titulo': '--Download no Gdrive',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê tentou baixar no gdrive mas não conseguiu?\n' +
-        'Temos um tutorial que ensina a baixar mesmo com o gdrive bloqueando o arquivo que ao verificar estava online.\n\n' +
+        'Temos um tutorial que ensina a baixar mesmo com cota excedida  do gdrive o arquivo que ao verificar estava online.\n\n' +
         '[b]Veja:[/b]\n' +
         '[url]http://filewarez.tv/showthread.php?t=663102[/url]\n\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
@@ -39,7 +39,7 @@ function criarDropDownMenu() {
 	  {
 	    'titulo': '--Download Gdrive + P2I',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê tentou baixar no gdrive mas não conseguiu?\n' +
-        'Temos um tutorial que ensina a baixar mesmo com o gdrive bloqueando o arquivo que ao verificar estava online.\n\n' +
+        'Temos um tutorial que ensina a baixar mesmo com cota excedida do gdrive o arquivo que ao verificar estava online.\n\n' +
         '[b]Veja:[/b]\n' +
         '[url]http://filewarez.tv/showthread.php?t=663102[/url]\n\n' +
 		'Este Up que você quer baixar, também está com [b]LINK P2I[/b], abaixo estou colocando o tutorial sobre o P2I, e como baixa-lo.\n' +
@@ -90,10 +90,10 @@ function criarDropDownMenu() {
 	  },
       {
         'titulo': '--link Mailshare',
-        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nEste  [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] que você está tentando baixar foi compartilhado através do programa [B]MailShare[/B]' +
-        ' e você precisará dele para realizar o download. Nos links abaixo você tem o tutorial para download e utilização do programa' +
-        ' e também o tópico para tirar dúvidas.\n\nLinks:\n[url]http://filewarez.tv/showthread.php?t=165119[/url]\n' +
-        '[url]http://filewarez.tv/showthread.php?t=480347[/url]\n\n' +
+        'mensagem': 'Olá ' + textpara.innerHTML + '\n\nEste  [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] que você está tentando baixar foi compartilhado através do programa [B]MailShare.[/B]\n' +
+        'Todos uploads p2m que vc queira baixar, verifique se existe em http ou em P2I, caso nao tenha reporte para que possamos recuperar o upload p2m caso estiver online, ' +
+        'o upload será reupado normalmente em P2I, caso tenha duvidas sobre P2I acesse:\n' +
+        '[url]http://filewarez.tv/showthread.php?t=787580[/url]\n\n' +
         'Em caso de outras dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
       },
