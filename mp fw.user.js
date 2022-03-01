@@ -77,6 +77,27 @@ function criarDropDownMenu() {
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
 	  },
+	  {
+	   'titulo': '--Arquivo sem nick/id',
+	   'mensagem': textpara.innerHTML + ',\n\n' +
+	   'Não pude aprovar seu upload por não constar o seu nick utilizado aqui na FW no nome do ' +
+	   'arquivo/pasta principal, conforme descrito na regra para postagens da ' +
+	   'comunidade. Segue o trecho em questão:\n\n' +
+     '[quote]Art. 28. Os uploads realizados devem atender aos requisitos a seguir elencados,' +
+	   ' a fim de se constatar a veracidade da autoria do mesmo:\n\n' +
+     'I – Na área da COMUNIDADE, deve constar obrigatoriamente no nome do arquivo upado o nick ' +
+	   'ou o ID do usuário no fórum. O ID pode ser obtido clicando no link \'Meu Perfil\' no topo ' +
+	   'do site. Caso tenha dificuldade de identificar o seu, clique AQUI para ver uma imagem ilustrativa.\n' +
+     'Exemplo:\nFilme.SeuNick.avi certo\nSeuNick_Filme.avi certo\n28447_Serie.mkv certo\n\n' +
+     'II – Fica proibida fazer qualquer menção a FileWarez e/ou qualquer outro site warez/tracker/blog ' +
+	   'e afins, seja no nome do arquivo, senhas para descompactação ou qualquer outra forma não mencionada aqui.\n\n' +
+     'Erros:\n\nFilme.SeuNick.FileWarez.tv.avi errado\nFilme.SeuNick.fw.tv.avi errado\n' +
+     'Filme..f1l3w4r3z.7v.avi errado\ntherebels_Filme.avi errado\n\n' +
+     'Parágrafo único. É vedada a utilização do espaço de descrição, presente em alguns servidores,' +
+	   ' para a veiculação de qualquer tipo de propaganda inclusive referenciar a própria FileWarez.[/quote]' +
+     '\n\nPor gentileza, faça a(s) correção(ões) solicitada(s) e envie um novo upload.' +
+     '\n\nAtenciosamente,\n[b]' + nickme[1] + '[/b]'
+	  },
       {
         'titulo': '==------P2M/P2I------==',
         'separador': 'on',
