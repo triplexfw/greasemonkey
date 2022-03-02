@@ -5,7 +5,7 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.tv/private\.php\?do\=newpm.*$/
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/private\.php\?do\=newpm.*$/
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1.20
+// @version     1.21
 // @grant       unsafeWindow
 // @grant       GM_xmlhttpRequest
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/mp%20fw.user.js
@@ -30,8 +30,9 @@ function criarDropDownMenu() {
       {
         'titulo': '--Download no Gdrive',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nVocê tentou baixar no gdrive mas não conseguiu?\n' +
-        'Temos um tutorial que ensina a baixar mesmo com cota excedida  do gdrive o arquivo que ao verificar estava online.\n\n' +
+        'Temos um tutorial que ensina a baixar mesmo com cota excedida  do GDRIVE o arquivo que ao verificar estava online.\n\n' +
         '[b]Veja:[/b]\n' +
+	'[url]https://filewarez.tv/showthread.php?t=959363[/url]\n' +
         '[url]http://filewarez.tv/showthread.php?t=663102[/url]\n\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
@@ -79,7 +80,7 @@ function criarDropDownMenu() {
 	  },
 	  {
 	   'titulo': '--Arquivo sem nick/id',
-	   'mensagem': textpara.innerHTML + ',\n\n' +
+	   'mensagem': 'Olá ' + textpara.innerHTML + ',\n\n' +
 	   'Não pude aprovar seu upload por não constar o seu nick utilizado aqui na FW no nome do ' +
 	   'arquivo/pasta principal, conforme descrito na regra para postagens da ' +
 	   'comunidade. Segue o trecho em questão:\n\n' +
@@ -127,8 +128,10 @@ function criarDropDownMenu() {
         'titulo': '--Links/Contas Online',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO link HTTP do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] foi(ram)' +
         ' verificado(s) por mim e está(ão) [B]online(s) e funcional(is)[/B].\n\nCaso você esteja tentando fazer download de link http' +
-        ' GDRIVE e estiver recebendo mensagens como Not Found ou a cota máxima de download foi atingida, veja o [URL="http://filewarez.' +
-        'tv/showthread.php?t=663102"][COLOR=#3366ff]tutorial de como baixar no GDRIVE[/COLOR][/URL].\n\n[B]DICA:[/B]' +
+        ' GDRIVE e estiver recebendo mensagens como \"Not Found\" ou \"a cota máxima de download foi atingida\",' +
+	' veja um destes dois tutoriais de como baixar no GDRIVE:\n' +
+	'[URL="https://filewarez.tv/showthread.php?t=959363"][COLOR=#3366ff]1º Tutorial[/COLOR][/URL],' +
+        ' [URL="http://filewarez.tv/showthread.php?t=663102"][COLOR=#3366ff]2º Tutorial[/COLOR][/URL].\n\n[B]DICA:[/B]' +
         ' Não faça download de arquivos grandes por navegador. Sempre que possível use um gerenciador de download, como Free Download Manager,' +
         ' Internet Download Manager, jDownloader entre outros. Assim você diminui consideravelmente as chances do arquivo se corromper no download.\n\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
@@ -137,7 +140,7 @@ function criarDropDownMenu() {
       {
         'titulo': '--Links/Contas Offline',
         'mensagem': 'Olá ' + textpara.innerHTML + '\n\nO link HTTP do [url\=\"' + tagurl + '\"][COLOR=#3366ff]tópico/upload[/COLOR][/url] foi(ram)' +
-        ' verificado(s) por mim e realmente está(ão) [B]offline(s)[/B]. Infelizmente o Uploader não term condições de reupa-lo(s) e por' +
+        ' verificado(s) por mim e realmente está(ão) [B]offline(s)[/B]. Infelizmente o Uploader não tem condições de reupa-lo(s) e por' +
         ' isso o upload foi [B]apagado[/B].\n\nObrigado(a) pela sua contribuição.\n' +
         'Em caso de dúvidas estou a disposição.\n\n' +
         'Att.\n' + nickme[1]
