@@ -6,7 +6,7 @@
 // @include     /^http(s)?:\/\/(www\.)?filewarez\.ml/.*$/
 // @updateURL   https://github.com/triplexfw/greasemonkey/raw/master/fwp2m.meta.js
 // @downloadURL https://github.com/triplexfw/greasemonkey/raw/master/fwp2m.user.js
-// @version     1.26
+// @version     1.27
 // @grant       none
 // @run-at      document-idle
 // ==/UserScript==
@@ -34,7 +34,7 @@ function iniciar() {
  if (linkado) { 
   var janela = document.createElement('ul');
  
-               janela.style = 'top: 50%; left: 95%; position: fixed; margin: -30px 0 0 -80px; width: 140px; height: 35px; ' +
+               janela.style = 'top: 30%; left: 95%; position: fixed; margin: -30px 0 0 -80px; width: 140px; height: 35px; ' +
                  'padding: 20px; background: #fff; z-index: 999999999;';
               
                janela.innerHTML = '<button type="button" onclick="location.hash=\'#upload_check_all\'">LINK</button>&nbsp;&nbsp;&nbsp;' +
